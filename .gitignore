@@ -32,4 +32,4 @@ hs_err_pid*
 .settings
 test-output
 
-src/test/resources/webdrivers/
+src/test/resources/
