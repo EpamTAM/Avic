@@ -1,6 +1,10 @@
 #IDE files
  .idea/
+<<<<<<< HEAD
 
+=======
+ 
+>>>>>>> 5f0ea0abda9abb97e5bad7e5b7dd209c4e46be31
 # Compiled class file
 *.class
 
