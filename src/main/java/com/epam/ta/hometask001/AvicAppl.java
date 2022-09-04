@@ -16,6 +16,6 @@ public class AvicAppl {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        driver.close();
+        driver.quit();
     }
 }
