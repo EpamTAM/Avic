@@ -2,11 +2,17 @@ package com.epam.ta.hometask001.ui.locators;
 
 import org.openqa.selenium.By;
 
-public enum SubCategoryPageLocators implements BaseLocator{
-    ;
+public enum SubCategoryPageLocators implements BaseLocator {
+    SUB_CATEGORY_TITLE(By.xpath("//div[@class='page-title page-title-category']"));
+
+    private final By path;
+
+    SubCategoryPageLocators(By path) {
+        this.path = path;
+    }
 
     @Override
     public By getPath() {
-        return null;
+        return path;
     }
 }

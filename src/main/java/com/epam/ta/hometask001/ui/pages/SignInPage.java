@@ -2,7 +2,7 @@ package com.epam.ta.hometask001.ui.pages;
 
 import org.openqa.selenium.WebDriver;
 
-import static com.epam.ta.hometask001.ui.locators.SignInLocators.*;
+import static com.epam.ta.hometask001.ui.locators.SignInPageLocators.*;
 
 public class SignInPage extends BasePage{
 
