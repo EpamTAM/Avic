@@ -1,4 +1,4 @@
-package com.epam.ta.hometask001.ui.locators;
+package com.epam.ta.avic.ui.locators;
 
 import org.openqa.selenium.By;
 

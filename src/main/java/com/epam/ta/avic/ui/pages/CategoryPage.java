@@ -1,8 +1,7 @@
-package com.epam.ta.hometask001.ui.pages;
+package com.epam.ta.avic.ui.pages;
 
+import com.epam.ta.avic.ui.locators.CategoryPageLocators;
 import org.openqa.selenium.WebDriver;
-
-import static com.epam.ta.hometask001.ui.locators.CategoryPageLocators.*;
 
 public class CategoryPage extends BasePage{
 
@@ -11,6 +10,6 @@ public class CategoryPage extends BasePage{
     }
 
     public String getCategoryTitle(){
-        return driver.findElement(CATEGORY_TITLE.getPath()).getText();
+        return driver.findElement(CategoryPageLocators.CATEGORY_TITLE.getPath()).getText();
     }
 }

@@ -1,4 +1,4 @@
-package com.epam.ta.hometask001.ui.pages;
+package com.epam.ta.avic.ui.pages;
 
 
 
@@ -9,7 +9,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import static com.epam.ta.hometask001.ui.locators.HomePageLocators.*;
+import static com.epam.ta.avic.ui.locators.HomePageLocators.*;
 
 public class HomePage extends BasePage{
 

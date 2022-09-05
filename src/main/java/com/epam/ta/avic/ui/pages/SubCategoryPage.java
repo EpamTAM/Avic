@@ -1,8 +1,7 @@
-package com.epam.ta.hometask001.ui.pages;
+package com.epam.ta.avic.ui.pages;
 
+import com.epam.ta.avic.ui.locators.SubCategoryPageLocators;
 import org.openqa.selenium.WebDriver;
-
-import static com.epam.ta.hometask001.ui.locators.SubCategoryPageLocators.*;
 
 public class SubCategoryPage extends BasePage{
 
@@ -16,7 +15,7 @@ public class SubCategoryPage extends BasePage{
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        System.out.println("Text - " + driver.findElement(SUB_CATEGORY_TITLE.getPath()).getText() );
-        return driver.findElement(SUB_CATEGORY_TITLE.getPath()).getText();
+        System.out.println("Text - " + driver.findElement(SubCategoryPageLocators.SUB_CATEGORY_TITLE.getPath()).getText() );
+        return driver.findElement(SubCategoryPageLocators.SUB_CATEGORY_TITLE.getPath()).getText();
     }
 }

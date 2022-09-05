@@ -1,4 +1,4 @@
-package com.epam.ta.hometask001.ui.pages;
+package com.epam.ta.avic.ui.pages;
 
 import org.openqa.selenium.WebDriver;
 

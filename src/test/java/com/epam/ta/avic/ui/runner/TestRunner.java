@@ -1,6 +1,6 @@
-package com.epam.ta.hometask001.ui.runner;
+package com.epam.ta.avic.ui.runner;
 
-import com.epam.ta.hometask001.ui.propertiesproviders.SystemProperties;
+import com.epam.ta.avic.ui.propertiesproviders.SystemProperties;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterMethod;

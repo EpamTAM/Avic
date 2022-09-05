@@ -1,8 +1,7 @@
-package com.epam.ta.hometask001.ui.pages;
+package com.epam.ta.avic.ui.pages;
 
+import com.epam.ta.avic.ui.locators.HeaderLocators;
 import org.openqa.selenium.WebDriver;
-
-import static com.epam.ta.hometask001.ui.locators.HeaderLocators.*;
 
 public class Header extends BasePage {
 
@@ -11,7 +10,7 @@ public class Header extends BasePage {
     }
 
     public SignInPage openSignInPage() {
-        driver.findElement(SIGN_IN_BUTTON.getPath()).click();
+        driver.findElement(HeaderLocators.SIGN_IN_BUTTON.getPath()).click();
         return new SignInPage(driver);
     }
 }

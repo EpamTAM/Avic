@@ -1,6 +1,6 @@
-package com.epam.ta.hometask001.ui.pages;
+package com.epam.ta.avic.ui.pages;
 
-import com.epam.ta.hometask001.ui.runner.TestRunner;
+import com.epam.ta.avic.ui.runner.TestRunner;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 

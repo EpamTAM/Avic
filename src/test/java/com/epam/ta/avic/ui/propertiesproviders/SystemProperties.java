@@ -1,4 +1,4 @@
-package com.epam.ta.hometask001.ui.propertiesproviders;
+package com.epam.ta.avic.ui.propertiesproviders;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
