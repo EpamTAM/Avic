@@ -3,16 +3,20 @@ package com.epam.ta.avic.ui.runner;
 import com.epam.ta.avic.ui.propertiesproviders.SystemProperties;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
+import org.testng.asserts.SoftAssert;
 
 import java.util.concurrent.TimeUnit;
 
 public class TestRunner {
     protected static WebDriver driver;
     private SystemProperties systemProperties = new SystemProperties();
+    protected SoftAssert softAssert;
 
-    @BeforeMethod
+    @BeforeClass
     public void getDriver() {
         switch (systemProperties.getBrowser()) {
             case "chrome": {
@@ -25,14 +29,19 @@ public class TestRunner {
             }
         }
         driver.manage().window().maximize();
-        driver.get(systemProperties.getBaseURL());
         driver.manage().timeouts().pageLoadTimeout(120l, TimeUnit.SECONDS);
+        softAssert = new SoftAssert();
     }
 
-    @AfterMethod
+    @AfterClass
     public void quiteDriver() {
         if (driver != null) {
             driver.quit();
         }
+    }
+
+    @BeforeMethod
+    public void setUp() {
+        driver.get(systemProperties.getBaseURL());
     }
 }
