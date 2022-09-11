@@ -1,8 +1,8 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
 
 <suite name="https://avic.ua/ua Tests Suite" verbose="3" preserve-order="true" parallel="false">
-  <!--
-    <test name="SignIn tests" >
+
+    <test name="SignIn tests">
         <classes>
             <class name="com.epam.ta.avic.ui.pages.SignInTest">
                 <methods>
@@ -10,10 +10,6 @@
                 </methods>
             </class>
         </classes>
-    </test>
-
-    <test name="Left Side Menu Tests">
-        <classes>
             <class name="com.epam.ta.avic.ui.pages.LeftSideMenuTest">
                 <methods>
                     <include name="verifyThatLeftSideMenuItemOpens"/>
@@ -22,7 +18,7 @@
             </class>
         </classes>
     </test>
-    -->
+
 
     <test name="ShopCart Tests">
         <classes>
@@ -31,6 +27,7 @@
                     <include name="verifyThatShopCartOpens"/>
                     <include name="verifyThatProductCountIncreaseAfterAddProduct"/>
                     <include name="verifyRemoveProductFromShopCart"/>
+                    <include name="verifyThatProductAmountIncreasesAndTotalSumIsCorrect"/>
                 </methods>
             </class>
         </classes>

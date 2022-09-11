@@ -3,6 +3,7 @@ package com.epam.ta.avic.ui.runner;
 import com.epam.ta.avic.ui.propertiesproviders.SystemProperties;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
@@ -21,7 +22,9 @@ public class TestRunner {
         switch (systemProperties.getBrowser()) {
             case "chrome": {
                 System.setProperty("webdriver.chrome.driver", systemProperties.getChromeWedDriverPath());
-                driver = new ChromeDriver();
+                ChromeOptions chromeOptions = new ChromeOptions();
+                chromeOptions.addArguments("--disable-notifications");
+                driver = new ChromeDriver(chromeOptions);
                 break;
             }
             default: {
