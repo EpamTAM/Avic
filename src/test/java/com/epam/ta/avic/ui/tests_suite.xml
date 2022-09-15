@@ -10,6 +10,10 @@
                 </methods>
             </class>
         </classes>
+    </test>
+
+    <test name="LeftSide Menu tests">
+        <classes>
             <class name="com.epam.ta.avic.ui.pages.LeftSideMenuTest">
                 <methods>
                     <include name="verifyThatLeftSideMenuItemOpens"/>
@@ -18,7 +22,6 @@
             </class>
         </classes>
     </test>
-
 
     <test name="ShopCart Tests">
         <classes>

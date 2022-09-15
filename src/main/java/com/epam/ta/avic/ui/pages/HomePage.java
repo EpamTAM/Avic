@@ -41,6 +41,7 @@ public class HomePage extends BasePage{
         Actions moveMouse = new Actions(driver);
         moveMouse.moveToElement(parent)
                 .build().perform();
+
         webElement.click();
         return new SubCategoryPage(driver);
     }
@@ -49,6 +50,8 @@ public class HomePage extends BasePage{
         Actions moveMouse = new Actions(driver);
         moveMouse.moveToElement(driver.findElement(parent))
                 .build().perform();
+        new WebDriverWait(driver, 60L )
+                .until(ExpectedConditions.elementToBeClickable(webElement));
         driver.findElement(webElement).click();
         return new SubCategoryPage(driver);
     }
