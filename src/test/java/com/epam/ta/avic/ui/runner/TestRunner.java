@@ -3,8 +3,9 @@ package com.epam.ta.avic.ui.runner;
 import com.epam.ta.avic.ui.propertiesproviders.SystemProperties;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterClass;
-import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.asserts.SoftAssert;
@@ -20,8 +21,15 @@ public class TestRunner {
     public void getDriver() {
         switch (systemProperties.getBrowser()) {
             case "chrome": {
-                System.setProperty("webdriver.chrome.driver", systemProperties.getChromeWedDriverPath());
-                driver = new ChromeDriver();
+                System.setProperty("webdriver.chrome.driver", systemProperties.getChromeWebDriverPath());
+                ChromeOptions chromeOptions = new ChromeOptions();
+                chromeOptions.addArguments("--disable-notifications");
+                driver = new ChromeDriver(chromeOptions);
+                break;
+            }
+            case "firefox":{
+                System.setProperty("webdriver.gecko.driver", systemProperties.getFireFoxWebDriverPath());
+                driver = new FirefoxDriver();
                 break;
             }
             default: {

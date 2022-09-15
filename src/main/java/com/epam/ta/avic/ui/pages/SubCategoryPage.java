@@ -31,4 +31,13 @@ public class SubCategoryPage extends BasePage{
             throw new IllegalArgumentException("Product can't be bought");
         }
     }
+
+    public ShopCartModal addProductShopCart(By productXpath) {
+        if (driver.findElement(productXpath).findElements(PRODUCT_BUY_BUTTON.getPath()).size() != 0) {
+            driver.findElement(productXpath).findElement(PRODUCT_BUY_BUTTON.getPath()).click();
+            return new ShopCartModal(driver);
+        } else {
+            throw new IllegalArgumentException("Product can't be bought");
+        }
+    }
 }

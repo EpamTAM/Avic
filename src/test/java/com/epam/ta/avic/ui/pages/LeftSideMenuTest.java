@@ -20,8 +20,8 @@ public class LeftSideMenuTest extends TestRunner {
     @Test(description = "Verify that user able to open left side submenu item")
     public void verifyThatLeftSideSubMenuItemOpens() {
         String actualTitle = new HomePage(driver)
-                .openSubMenuItem(driver.findElement(MENU_ITEM_COMPUTERS_BY_INDEX.getPath())
-                        , driver.findElement(MENU_SUBMENU_ITEM_MONITORS.getPath()))
+                .openSubMenuItem(MENU_ITEM_COMPUTERS_BY_INDEX.getPath()
+                        , MENU_SUBMENU_ITEM_MONITORS.getPath())
                 .getSubCategoryTitle();
         String expectedTitle = "Монітори";
         Assert.assertEquals(actualTitle, expectedTitle);
